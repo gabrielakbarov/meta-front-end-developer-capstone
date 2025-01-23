@@ -25,10 +25,35 @@
     padding-left: 0;
 }
 
+.footer img.horizontal-logo {
+    display: none; /* Hide horizontal logo */
+}
+
+.footer img.vertical-logo {
+    display: block; /* Show vertical logo */
+    width: 5vw; /* Adjust size as needed */
+}
+
+
 @media (max-width: 768px) {
     .footer {
         flex-direction: column;
         align-items: center;
         width: 100%;
+    }
+
+    .footer .section-container{
+        flex-direction: column;
+        width: 90%;
+        align-items: center;
+    }
+
+    .footer img.horizontal-logo {
+        display: block;
+        width: 50vw;/* Hide horizontal logo */
+    }
+
+    .footer img.vertical-logo {
+        display: none; /* Show vertical logo */
     }
 }

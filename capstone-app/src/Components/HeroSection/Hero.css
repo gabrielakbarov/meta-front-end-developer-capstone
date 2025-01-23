@@ -11,12 +11,20 @@
     width: 66vw;
     margin: 0 auto;
     background-color: #495e57;
+    padding: 2vh;
 }
 
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
         align-items: center;
+        width: 90%;
+    }
+
+    .hero img {
+        margin-top: 2vh;
         width: 100%;
+        max-width: 100vw;
+        max-height: 100vw;
     }
 }

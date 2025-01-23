@@ -23,7 +23,7 @@ function Highlights() {
                             <p>The famous Greek salad is a vibrant mix of fresh cucumbers, juicy tomatoes, red onions,
                                 Kalamata olives, and creamy feta cheese. Dressed with olive oil and oregano, it's a
                                 classic taste of the Mediterranean.</p>
-                            <button className={"button button-grey"}>Order a delivery</button>
+                            <button className={"button button-grey"}>Order here</button>
                         </div>
                     </article>
                     <article className={"special"}>
@@ -36,7 +36,7 @@ function Highlights() {
                             <p>The classic bruschetta is a delicious Italian appetizer featuring toasted bread topped
                                 with a fresh blend of diced tomatoes, garlic, basil, and olive oil. Simple yet
                                 flavorful, it’s a perfect start to any meal.</p>
-                            <button className={"button button-grey"}>Order a delivery</button>
+                            <button className={"button button-grey"}>Order here</button>
                         </div>
                     </article>
                     <article className={"special"}>
@@ -49,7 +49,7 @@ function Highlights() {
                             <p>The zesty lemon dessert is a refreshing treat, combining tangy lemon flavor with a sweet,
                                 creamy texture. Light and indulgent, it’s the perfect way to brighten up any
                                 occasion.</p>
-                            <button className={"button button-grey"}>Order a delivery</button>
+                            <button className={"button button-grey"}>Order here</button>
                         </div>
                     </article>
                 </div>
