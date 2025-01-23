@@ -1,0 +1,22 @@
+.hero img {
+    max-width: 29vw;
+    max-height: 29vw;
+    border-radius: 18px;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 66vw;
+    margin: 0 auto;
+    background-color: #495e57;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}

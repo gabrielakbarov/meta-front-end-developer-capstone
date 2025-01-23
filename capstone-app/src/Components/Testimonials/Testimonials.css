@@ -1,0 +1,33 @@
+.testimonials {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 66vw;
+    margin: 0 auto;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.testimonials .section-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.testimonials section {
+    width: 14vw;
+    background-color: #edefee;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rating-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+

@@ -1,0 +1,42 @@
+body {
+    background-color: white;
+}
+
+.text-dark {
+    color: #333333;
+    text-decoration: none;
+}
+
+.text-yellow {
+    color: #f4ce14;
+}
+
+.text-orange {
+    color: #ee9972
+}
+
+.text-light {
+    color: #edefee;
+}
+
+.background-green {
+    background-color: #495e57;
+}
+
+button {
+    border-radius: 15px;
+    padding: 1vw;
+    border: none;
+}
+
+.button-yellow {
+    background-color: #f4ce14;
+}
+
+.button-grey {
+    background-color: #edefee;
+    padding-left: 0;
+}
+ul {
+    list-style: none;
+}
