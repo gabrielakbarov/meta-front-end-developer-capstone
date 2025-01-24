@@ -1,11 +1,11 @@
 import '../../App.css';
 import './BookingForm.css';
-import React, {useState} from "react";
-import {fetchAPI, submitAPI} from "../../util/time-api.js";
-import {Formik, Form, Field, ErrorMessage} from "formik";
+import React, { useState } from "react";
+import { fetchAPI, submitAPI } from "../../util/time-api.js";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
-function BookingForm({availableTimes, setAvailableTimes}) {
+function BookingForm({ availableTimes, setAvailableTimes }) {
     const [date, setDate] = useState("");
 
     const initialValues = {
@@ -50,27 +50,27 @@ function BookingForm({availableTimes, setAvailableTimes}) {
                 validationSchema={validationSchema}
                 onSubmit={onSubmit}
             >
-                {({setFieldValue}) => (
+                {({ setFieldValue }) => (
                     <Form>
                         <div className="bookingContainer">
                             {/* Persönliche Informationen */}
                             <div className="bookingBox">
                                 <Field name="firstName">
-                                    {({field}) => (
+                                    {({ field }) => (
                                         <div>
                                             <label>First Name</label>
-                                            <input {...field} type="text" placeholder="Enter your First Name"/>
-                                            <ErrorMessage name="firstName" component="div" className="error"/>
+                                            <input {...field} type="text" placeholder="Enter your First Name" />
+                                            <ErrorMessage name="firstName" component="div" className="error" />
                                         </div>
                                     )}
                                 </Field>
 
                                 <Field name="lastName">
-                                    {({field}) => (
+                                    {({ field }) => (
                                         <div>
                                             <label>Last Name</label>
-                                            <input {...field} type="text" placeholder="Enter your Last Name"/>
-                                            <ErrorMessage name="lastName" component="div" className="error"/>
+                                            <input {...field} type="text" placeholder="Enter your Last Name" />
+                                            <ErrorMessage name="lastName" component="div" className="error" />
                                         </div>
                                     )}
                                 </Field>
@@ -79,7 +79,7 @@ function BookingForm({availableTimes, setAvailableTimes}) {
                             {/* Reservierungsdetails */}
                             <div className="bookingBox">
                                 <Field name="date">
-                                    {({field}) => (
+                                    {({ field }) => (
                                         <div>
                                             <label>Choose Date</label>
                                             <input
@@ -91,32 +91,32 @@ function BookingForm({availableTimes, setAvailableTimes}) {
                                                     handleDateChange(e);
                                                 }}
                                             />
-                                            <ErrorMessage name="date" component="div" className="error"/>
+                                            <ErrorMessage name="date" component="div" className="error" />
                                         </div>
                                     )}
                                 </Field>
 
                                 <Field name="time">
-
-                                    <div>
-                                        <label>Reservation Time</label><br/>
-                                        <Field id="time" name="time" as="select">
-                                            {availableTimes.map((time) => (
-                                                <option key={time} value={time}>
-                                                    {time}
-                                                </option>
-                                            ))}
-                                        </Field>
-                                        <ErrorMessage name="time" component="div" className="error"/>
-                                    </div>
-
+                                    {({ field }) => (
+                                        <div>
+                                            <label>Reservation Time</label><br />
+                                            <Field id="time" name="time" as="select">
+                                                {availableTimes.map((time) => (
+                                                    <option key={time} value={time}>
+                                                        {time}
+                                                    </option>
+                                                ))}
+                                            </Field>
+                                            <ErrorMessage name="time" component="div" className="error" />
+                                        </div>
+                                    )}
                                 </Field>
                             </div>
 
                             {/* Zusätzliche Details */}
                             <div className="bookingBox">
                                 <Field name="guests">
-                                    {({field}) => (
+                                    {({ field }) => (
                                         <div>
                                             <label>Number of Guests</label>
                                             <input
@@ -126,25 +126,25 @@ function BookingForm({availableTimes, setAvailableTimes}) {
                                                 max="10"
                                                 placeholder="1"
                                             />
-                                            <ErrorMessage name="guests" component="div" className="error"/>
+                                            <ErrorMessage name="guests" component="div" className="error" />
                                         </div>
                                     )}
                                 </Field>
 
                                 <Field name="occasion">
-
-                                    <div>
-                                        <label>Occasion</label><br/>
-                                        <Field id="occasion" name="occasion" as="select">
-                                            {occasions.map((occasion) => (
-                                                <option key={occasion} value={occasion}>
-                                                    {occasion}
-                                                </option>
-                                            ))}
-                                        </Field>
-                                        <ErrorMessage name="occasion" component="div" className="error"/>
-                                    </div>
-
+                                    {({ field }) => (
+                                        <div>
+                                            <label>Occasion</label><br />
+                                            <Field id="occasion" name="occasion" as="select">
+                                                {occasions.map((occasion) => (
+                                                    <option key={occasion} value={occasion}>
+                                                        {occasion}
+                                                    </option>
+                                                ))}
+                                            </Field>
+                                            <ErrorMessage name="occasion" component="div" className="error" />
+                                        </div>
+                                    )}
                                 </Field>
                             </div>
                         </div>
