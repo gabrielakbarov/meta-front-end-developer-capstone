@@ -3,14 +3,27 @@ import './Highlights.css';
 import greekSaladImage from '../../assets/greek salad.jpg'
 import bruchettaImage from '../../assets/bruchetta.jpg'
 import lemonDessertImage from '../../assets/lemon dessert.jpg'
+import {useNavigate} from "react-router";
 
 function Highlights() {
+    const orderButton = "Add to cart";
+
+    const navigate = useNavigate();
+
+    const onMenu = () => {
+        navigate("/menu");
+    }
+
+    const onOrder = () => {
+        navigate("/order-online");
+    }
+
     return (
         <>
             <div>
                 <div className={"highlights"}>
                     <h1 className={"text-dark"}>This weeks specials!</h1>
-                    <button className={"button button-yellow"}>Online Menu</button>
+                    <button className={"button button-yellow"} onClick={onMenu}>Online Menu</button>
                 </div>
                 <div className={"highlights"}>
                     <article className={"special"}>
@@ -23,7 +36,7 @@ function Highlights() {
                             <p>The famous Greek salad is a vibrant mix of fresh cucumbers, juicy tomatoes, red onions,
                                 Kalamata olives, and creamy feta cheese. Dressed with olive oil and oregano, it's a
                                 classic taste of the Mediterranean.</p>
-                            <button className={"button button-grey"}>Order here</button>
+                            <button onClick={onOrder} className={"button button-yellow"}>{orderButton}</button>
                         </div>
                     </article>
                     <article className={"special"}>
@@ -36,7 +49,7 @@ function Highlights() {
                             <p>The classic bruschetta is a delicious Italian appetizer featuring toasted bread topped
                                 with a fresh blend of diced tomatoes, garlic, basil, and olive oil. Simple yet
                                 flavorful, it’s a perfect start to any meal.</p>
-                            <button className={"button button-grey"}>Order here</button>
+                            <button onClick={onOrder} className={"button button-yellow"}>{orderButton}</button>
                         </div>
                     </article>
                     <article className={"special"}>
@@ -49,7 +62,7 @@ function Highlights() {
                             <p>The zesty lemon dessert is a refreshing treat, combining tangy lemon flavor with a sweet,
                                 creamy texture. Light and indulgent, it’s the perfect way to brighten up any
                                 occasion.</p>
-                            <button className={"button button-grey"}>Order here</button>
+                            <button onClick={onOrder} className={"button button-yellow"}>{orderButton}</button>
                         </div>
                     </article>
                 </div>
@@ -57,4 +70,5 @@ function Highlights() {
         </>
     )
 }
+
 export default Highlights;

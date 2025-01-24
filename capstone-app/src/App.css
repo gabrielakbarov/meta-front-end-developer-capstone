@@ -40,3 +40,16 @@ button {
 ul {
     list-style: none;
 }
+
+h1 {
+    font-size: xxx-large;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: x-large;
+}
+
+p {
+    font-size: large;
+}

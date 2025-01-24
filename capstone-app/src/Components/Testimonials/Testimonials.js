@@ -34,7 +34,7 @@ function Testimonials() {
                     </section>
                     <section>
                         <div className={"rating-head"}>
-                            <h2 className={"text-dark"}>Sabine van der Marel van der Hollande van der Justus</h2>
+                            <h2 className={"text-dark"}>Sabine v. d. Marel v. d. Hollande v. d. Justus v. d. Picht</h2>
                             <h2 className={"text-orange"}>9.5/10</h2></div>
                         <p className={"text-dark"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua.</p>
